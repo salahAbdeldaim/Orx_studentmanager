@@ -39,13 +39,13 @@ jobs:
       - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flet==0.25.0 -r requirements.txt
+          pip install flet==0.24.1 -r requirements.txt
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
         with:
           channel: stable
-          flutter-version: any  # أو 3.24.3 لو عايزة إصدار محدد
+          flutter-version: 3.24.3
           architecture: x64
           cache: true
 
@@ -57,6 +57,7 @@ jobs:
       - name: Install Flutter Launcher Icons
         run: |
           flutter pub global activate flutter_launcher_icons
+          $env:PATH = "$env:PATH;C:\Users\runneradmin\AppData\Local\Pub\Cache\bin"
 
       - name: Flet Build Windows
         run: |
