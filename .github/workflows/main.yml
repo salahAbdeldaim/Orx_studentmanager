@@ -71,7 +71,7 @@ jobs:
           flutter config --no-analytics
           $env:PYTHONUTF8 = "1"
           $env:RICH_NO_COLOR = "1"
-          flet build windows --verbose --no-rich-output --build-number=$env:BUILD_NUMBER --build-version=$env:BUILD_VERSION --include-assets assets/*
+          flet build windows --verbose --no-rich-output --build-number=$env:BUILD_NUMBER --build-version=$env:BUILD_VERSION
         shell: powershell
 
       - name: Check Build Output
