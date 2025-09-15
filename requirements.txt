@@ -1,33 +1,18 @@
-# Core Dependencies
 flet
 python-telegram-bot
 pywhatkit
-
-# Database
 sqlalchemy
 alembic
-
-# Barcode & Image Processing
 python-barcode
 qrcode
 pillow
-
-# PDF Generation
 reportlab
-
-# Arabic Text Support
 arabic-reshaper
 python-bidi
-
-# Date & Time
 python-dateutil
 pytz
-
-# Networking & Async
 aiohttp
 requests
-
-# Development & Testing
 pytest
 pytest-cov
 black
@@ -35,4 +20,3 @@ isort
 mypy
 pre-commit
 pyinstaller
-
