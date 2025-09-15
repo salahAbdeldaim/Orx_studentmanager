@@ -1,0 +1,11 @@
+pywhatkit
+black
+flet
+pillow
+python-barcode
+arabic-reshaper
+python-bidi
+reportlab
+pywin32
+requests
+python-telegram-bot
