@@ -39,7 +39,14 @@ jobs:
       - name: Install Python Dependencies
         run: |
           python -m pip install --upgrade pip
-          pip install flet==0.24.1 -r requirements.txt
+          pip install --upgrade pip
+          pip install flet==0.24.1 sqlalchemy==2.0.31 alembic==1.13.2 python-telegram-bot==20.7
+
+      - name: Copy Assets
+        run: |
+          mkdir -p build/flutter/assets
+          cp -r assets/* build/flutter/assets/
+        shell: powershell
 
       - name: Setup Flutter
         uses: subosito/flutter-action@v2
@@ -64,7 +71,12 @@ jobs:
           flutter config --no-analytics
           $env:PYTHONUTF8 = "1"
           $env:RICH_NO_COLOR = "1"
-          flet build windows --verbose --no-rich-output --build-number=$env:BUILD_NUMBER --build-version=$env:BUILD_VERSION
+          flet build windows --verbose --no-rich-output --build-number=$env:BUILD_NUMBER --build-version=$env:BUILD_VERSION --include-assets assets/*
+        shell: powershell
+
+      - name: Check Build Output
+        run: |
+          dir build/windows
         shell: powershell
 
       - name: Compress Windows Build
