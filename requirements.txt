@@ -1,5 +1,5 @@
 # Core Dependencies
-flet>=
+flet
 python-telegram-bot
 pywhatkit
 
@@ -13,7 +13,7 @@ qrcode
 pillow
 
 # PDF Generation
-reportlab>=4.0.4
+reportlab
 
 # Arabic Text Support
 arabic-reshaper
@@ -36,14 +36,3 @@ mypy
 pre-commit
 pyinstaller
 
-# Note: The following are part of Python's standard library and don't need to be installed:
-# - asyncio
-# - logging
-# - multiprocessing
-# - platform
-# - socket
-# - threading
-# - datetime
-# - sqlite3
-# - os
-# - sys
