@@ -1,0 +1,49 @@
+# Core Dependencies
+flet>=
+python-telegram-bot
+pywhatkit
+
+# Database
+sqlalchemy
+alembic
+
+# Barcode & Image Processing
+python-barcode
+qrcode
+pillow
+
+# PDF Generation
+reportlab>=4.0.4
+
+# Arabic Text Support
+arabic-reshaper
+python-bidi
+
+# Date & Time
+python-dateutil
+pytz
+
+# Networking & Async
+aiohttp
+requests
+
+# Development & Testing
+pytest
+pytest-cov
+black
+isort
+mypy
+pre-commit
+pyinstaller
+
+# Note: The following are part of Python's standard library and don't need to be installed:
+# - asyncio
+# - logging
+# - multiprocessing
+# - platform
+# - socket
+# - threading
+# - datetime
+# - sqlite3
+# - os
+# - sys
